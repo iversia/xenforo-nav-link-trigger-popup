@@ -15,7 +15,7 @@ You are now able to simply hover over the entire link.
 
 Requirements
 ------------
-* [XenForo](http://xenforo.com/) 1.2.0
+* [XenForo](http://xenforo.com/) 1.2.x
 
 Installation
 ------------

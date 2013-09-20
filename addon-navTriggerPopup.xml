@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="navTriggerPopup" title="Navigation Entire Link Trigger Popup" version_string="1.0.0" version_id="100" url="http://www.iversia.com" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases/>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications>
+    <modification template="navigation" modification_key="iversia_nav_nopopupgadget" description="Add NoPopupGadget to navLink" execution_order="10" enabled="1" action="preg_replace">
+      <find><![CDATA[/<a\s+href="([^"]*)"\s+class="navLink"\s*>(.*?)/]]></find>
+      <replace><![CDATA[<a href="$1" class="navLink NoPopupGadget" rel="Menu">$2]]></replace>
+    </modification>
+    <modification template="navigation" modification_key="iversia_remove_splitctrl" description="Remove SplitCtrl from navigation" execution_order="10" enabled="1" action="preg_replace">
+      <find><![CDATA[/<a\s+href="([^"]*)"\s+class="SplitCtrl"\s+rel="Menu"\s*><\/a>/]]></find>
+      <replace><![CDATA[]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+</addon>
